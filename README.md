@@ -70,6 +70,7 @@ model.train()
 optim = torch.optim.Adam( model.parameters(), lr = learning_rate)
 
 model2 = MyModelAnalytic( cx, cy, "zeros", source )
+model2.loss_func=loss_func
 # ...similar for the model2
 optim2 = torch.optim.Adam( model2.parameters(), lr = learning_rate )
 ```
