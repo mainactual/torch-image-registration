@@ -89,7 +89,7 @@ optim2.zero_grad()
 ```
 `loss2` returned by `forward` is sum of per pixel loss calculated inside the function.
 
-As a result, one can observe that from image to image, either analytic or autograd converges better. Many times, analytic converges faster if it starts to converge (L2 or Cauchy loss are only mediocre for many registration tasks). Python-implementation of analytic differentials is actually a bit slower than torch-autograd and that is due to fact of unnecessary permutes and caching of arrays. In real world scenario, they can be calculated in-place. Also, the loss-function need not be per pixel and, for example, normalized mutual information can be calculated using the dot-products in similar fashion.
+As a result, one can observe that from image to image, either analytic or autograd converges better. Many times, analytic converges faster if it starts to converge (L2 or Cauchy loss are only mediocre for many registration tasks). Python-implementation of analytic differentials is actually a bit slower than torch-autograd and that is due to fact of unnecessary permutes and caching of arrays. In real world scenario, they can be calculated in-place. Also, the loss-function need not be per pixel and, for example, normalized mutual information can be calculated using the dot-products inside `AffineModelAnalytic` in similar fashion.
 
 
 
