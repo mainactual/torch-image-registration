@@ -2,7 +2,7 @@
 
 A traditional image registration employs chain rule for calculating derivatives
 
-$$ \frac{\partial}{\partial p}= C( F(\mathbf{x}),M( \mathbf{T} \mathbf{x}) )=C'(F(\mathbf{x}),M( \mathbf{T} \mathbf{x})) * \nabla M( \mathbf{T} \mathbf{x}) * \mathbf{T}'\mathbf{x}$$ 
+$$ \frac{\partial}{\partial p} C( F(\mathbf{x}),M( \mathbf{T} \mathbf{x}) )=C'(F(\mathbf{x}),M( \mathbf{T} \mathbf{x})) * \nabla M( \mathbf{T} \mathbf{x}) * \mathbf{T}'\mathbf{x}$$ 
 
 where C is the cost function, F and M are fixed and moving image respectively and 
 
